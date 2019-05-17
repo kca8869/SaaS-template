@@ -1,0 +1,193 @@
+.navbar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  padding: 1rem 2rem;
+  background-color: rgba($color-black,.4);
+  transition: $transition-default;
+  &__list{
+    list-style: none;
+
+    margin: 0 auto;
+    float: right;
+    display: inline-block;
+    transition: $transition-default;
+    @include respond(big-phone){
+      visibility: hidden;
+      background-color: rgba($color-black,.8);
+      padding: 1rem 2rem;
+      //width: 0;
+      position: absolute;
+      left: 0;
+      top: 0;
+      transform: translateX(-100%);
+    }
+  }
+  &__logo{
+    display: inline-block;
+    padding: 1rem;
+    padding-bottom: 0;
+  }
+
+  &__item{
+    display: inline-block;
+    @include respond(big-phone){
+      display: block;
+      padding: .5rem;
+
+    }
+}
+  &__link{
+    &,
+    &:link,
+    &:visited{
+      text-transform: uppercase;
+      text-decoration: none;
+      color: $color-white;
+      font-size: $font-size-default;
+      padding: 1.5rem ;
+      @include respond(big-phone){
+        width: 100%;
+      }
+    }
+
+    }
+
+
+  &__dropdown{
+
+    &--link{
+      text-transform: uppercase;
+      font-size: $font-size-default;
+      // height: 0;
+      padding: 1rem;
+      text-decoration: none;
+      color: $text-color;
+      float: none !important;
+      display: block;
+      &:hover{
+        color: $color-primary;
+      }
+      @include respond(big-phone){
+        color: $color-white;
+      }
+    }
+
+    &:hover + &--pages{
+      visibility: visible;
+      opacity: 1;
+    }
+    &:focus + &--pages{
+      visibility: visible;
+      opacity: 1;
+    }
+
+    &--pages{
+      position: absolute;
+      top: 5rem;
+      right: 15rem;
+      box-shadow: 0 0 5rem rgba($color-black,.4);
+      visibility: hidden;
+      opacity: 0;
+      background-color: $color-white;
+      padding: 2rem;
+      transition: $transition-default;
+      &:hover{
+        visibility: visible;
+        opacity: 1;
+      }
+      @include respond (big-phone){
+        position: relative;
+        top: 0;
+        right: 0;
+        padding: .5rem;
+        background-color: inherit;
+
+      }
+    }
+  }//END OF DROPDOWN
+  &__dropdown:hover ~ &__btn{
+    transform: translateY(0);
+  }
+  &__dropdown:focus ~ &__btn{
+    transform: translateY(0);
+  }
+  &__dropdown--pages:hover ~ &__btn{
+  //  @include respond(big-phone){
+      transform: translateY(0);
+
+  }
+  &__btn{
+    transition: $transition-default;
+    @include respond(big-phone){
+      transform: translateY(-9rem);
+    }
+  }
+
+  &__mobil{
+      display: none;
+    @include respond(big-phone){
+      display: block;
+      float: right;
+    }
+
+  }
+
+  &__checkbox{
+    display: none;
+
+
+  }
+
+  &__checkbox:checked ~ &__list{
+    visibility: visible;
+    transform: translateX(0);
+  }
+  &__checkbox:checked + &__label &__line{
+    background-color: transparent;
+  }
+  &__checkbox:checked + &__label &__line::after{
+    transform: rotateZ(-130deg);
+    top: 0;
+  }
+  &__checkbox:checked + &__label &__line::before{
+    transform: rotateZ(130deg);
+    top: 0;
+  }
+  &__label{
+    padding: 2rem 3rem;
+    display: none;
+
+  @include respond(big-phone){
+    display: block;
+    float: right;
+  }
+  }
+
+  &__line{
+
+    position: relative;
+
+    &,
+    &::before,
+    &::after{
+      display: inline-block;
+      background-color: $color-white;
+      width: 3rem;
+      height: 2px;
+      transition: $transition-default;
+    }
+    &::before, &::after{
+      content: "";
+      position: absolute;
+    }
+    &::after{
+      top: 1rem;
+    }
+    &::before{
+      top:-1rem;
+    }
+  }
+}

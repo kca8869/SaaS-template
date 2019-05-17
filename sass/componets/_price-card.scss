@@ -1,0 +1,42 @@
+.price-card{
+  text-align: center;
+  margin: 0 auto;
+  font-size: $font-size-default;
+  border: 1px solid $color-gray-light;
+
+  &:hover &__cta{
+    background-color: $color-primary;
+  }
+  &__title{
+    color: $color-gray-dark-1;
+    padding: 2rem 4rem;
+    background-color: $color-bg-light;
+    border-bottom: 1px solid $color-gray-light;
+  }
+
+  &__list{
+    list-style: none;
+    padding: 3rem 3rem 0 3rem;
+
+  }
+
+  &__item{
+    padding: .5rem
+  }
+
+  &__cta{
+    background-color: $color-bg-light;
+    padding: 3rem;
+    margin: 3rem;
+    transition: $transition-default;
+  }
+
+  &__price{
+    color: $color-gray-dark-1;
+    font-size: 5rem;
+    span{
+      font-size: $font-size-small;
+      color: $text-color;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "sass-temp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "node-sass sass/main.scss css/styles.css -w",
+    "devserver":"live-server",
+    "start":"npm-run-all --parallel watch:sass devserver",
+
+    "compile:css":"node-sass sass/main.scss css/styles.comp.css",
+    "concat:css":"concat -o css/styles.concat.css css/styles.comp.css css/css/fontawesome-all.css",
+    "prefix:css":"postcss --use autoprefixer -b \"last 10 versions\" css/styles.concat.css -o css/styles.prefix.css",
+    "compress:css":"node-sass css/styles.prefix.css css/styles.css --output-style compressed",
+    "build:css":"npm-run-all compile:css concat:css prefix:css compress:css"
+  },
+  "author": "Kevin",
+  "license": "ISC",
+  "devDependencies": {
+    "npm-run-all": "^4.1.3",
+    "autoprefixer": "^8.6.2",
+    "concat": "^1.0.3",
+    "node-sass": "^4.9.0",
+    "postcss-cli": "^5.0.0"
+  }
+}

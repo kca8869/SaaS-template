@@ -1,0 +1,31 @@
+.row{
+  margin: 0 auto;
+  @include clearfix;
+  //max-width: $grid-width;
+
+  &:not(:last-child){
+    margin-bottom: $gutter-horizontal;
+
+  }
+}
+  [class^="col-"]{
+    float: left;
+
+
+    &:not(:last-child){
+      margin-right: $gutter-horizontal;
+    }
+    @include respond(phone){
+      width: 100% !important;
+    }
+  }
+
+  .col-1-of-2{
+    width: calc((100% - #{$gutter-horizontal}) / 2);
+  }
+  .col-1-of-3{
+    width: calc((100% - #{$gutter-horizontal}*2) / 3);
+  }
+  .col-2-of-3{
+    width: calc(2*((100% - #{$gutter-horizontal}*2) / 3) + #{$gutter-horizontal});
+  }

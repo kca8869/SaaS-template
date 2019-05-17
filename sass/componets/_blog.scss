@@ -1,0 +1,12 @@
+.blog{
+  @include respond(phone){
+    padding: 2rem 0;
+  }
+  &__title a{
+    &:link,
+    &:visited{
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+}

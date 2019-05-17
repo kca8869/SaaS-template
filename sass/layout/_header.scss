@@ -1,0 +1,32 @@
+.header{
+  padding: 15rem 0 32rem 0;
+  position: relative;
+  background-image: linear-gradient(rgba($color-primary,.8),rgba($color-primary,.8)),
+                    url("../img/header-bg.jpg");
+  background-size: cover;
+  @include respond(sm-phone){
+    padding: 15rem 0;
+  }
+//  background-color: $color-primary;
+  &__text{
+
+
+  }
+
+
+
+  &__img{
+    position: absolute;
+    top:35rem;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 100%;
+    @include respond(sm-phone){
+      margin-top: 3rem;
+      position: relative;
+      top: 0;
+      left: 0;
+      transform: translate(0);
+    }
+  }
+}

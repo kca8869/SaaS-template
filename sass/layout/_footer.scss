@@ -1,0 +1,42 @@
+.footer{
+  padding: $padding-section;
+
+  &__title{
+    padding: 2rem 0;
+    font-size: 2rem;
+    color: $color-white;
+  }
+  &__paragraph{
+
+
+  }
+
+  &__link{
+    text-decoration: none;
+    color: #337AB7;
+
+  }
+
+  &__social{
+    padding: 3rem 0;
+
+  }
+
+  &__social-item{
+    font-size: $font-size-default;
+    padding-right: 1.5rem;
+
+  }
+
+  &__form{
+    margin: 2rem 0;
+  }
+  &__email{
+    padding: 1rem 2rem;
+    outline: none;
+    border: none;
+  }
+  &__submit{
+    padding: .8rem;
+  }
+}

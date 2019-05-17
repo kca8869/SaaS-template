@@ -1,0 +1,31 @@
+.feature-card{
+  text-align: center;
+  background-color: $color-bg-light;
+  padding: 2rem;
+  transition: $transition-default;
+  &:hover{
+    box-shadow: 0 0 5rem rgba($color-primary,.2);
+    background-color: $color-white;
+  }
+  &:hover &__icon{
+    color: $color-primary;
+  }
+  &:hover &__title{
+    color: $color-primary;
+  }
+  &__icon{
+    font-size: 5rem;
+    padding: 1rem;
+    transition: $transition-default;
+  }
+
+  &__title{
+    
+    transition: $transition-default;
+  }
+
+  &__text{
+    font-size: $font-size-default;
+    padding: 1rem;
+  }
+}

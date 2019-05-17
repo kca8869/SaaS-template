@@ -1,0 +1,41 @@
+.info-block{
+
+padding: 2rem;
+font-size: $font-size-default;
+font-weight: 400;
+
+@include respond(phone){
+  text-align: center;
+}
+  &__heading{
+    text-transform: uppercase;
+    color: $color-primary;
+    padding: 1rem 0;
+    font-weight: inherit;
+  }
+
+  &__title{
+    font-size: $font-size-heading-secondary;
+    color: $color-gray-dark-1;
+    line-height: 4rem;
+    font-weight: inherit;
+    padding: 1rem 0;
+    width: 80%;
+    @include respond(phone){
+      margin: 0 auto;
+    }
+  }
+
+  &__sub{
+    padding: 1rem 0;
+    color: $color-gray-dark-1;
+    font-weight: inherit;
+
+  }
+
+  &__paragraph{
+    padding: 1rem 0;
+    font-weight: inherit;
+
+  }
+}

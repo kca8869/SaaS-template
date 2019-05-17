@@ -1,0 +1,25 @@
+.grid-componet{
+  position: relative;
+  padding-left: 6rem;
+  &__number{
+    position: absolute;
+    top: 0;
+    left: 2rem;
+    color: $color-primary;
+    font-size: 4rem;
+    font-weight: 300;
+  }
+
+  &__text-box{
+    padding-left: 4rem;
+  }
+
+  &__title{
+    padding: 1rem;
+    font-size: $font-size-heading-tertiary;
+  }
+
+  &__paragraph{
+    padding: 1rem;
+  }
+}

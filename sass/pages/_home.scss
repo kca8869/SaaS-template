@@ -1,0 +1,98 @@
+
+
+.section-features{
+  padding: 32rem 10rem 10rem 10rem;
+  @include respond(tab-port){
+    padding: 2rem;
+    padding-top: 40rem;
+  }
+  @include respond(big-phone){
+    padding-top: 30rem;
+  }
+  @include respond(phone){
+    padding: 0;
+    padding-top: 15rem;
+  }
+  @include respond(sm-phone){
+    padding-top: 5rem;
+  }
+
+}
+
+.section-interface{
+  @include padding-section;
+
+  // padding: $padding-section;
+  background-color: $color-bg-light;
+  @include respond(phone){
+    text-align: center;
+  }
+
+}
+
+.section-grid{
+  @include padding-section;
+  //padding: $padding-section;
+}
+
+.section-banner{
+  @include padding-section;
+  //padding: 8rem 10rem;
+  background-color: $color-primary;
+
+}
+
+.section-video{
+  .video-container{
+    position: relative;
+    background-image: linear-gradient(rgba($color-black,.5),rgba($color-black,.5)),
+                      url("../img/f1.jpg");
+    padding-top: 54%;
+    background-size: cover;
+
+    &__checkbox{
+      display: none;
+
+
+    }
+    &__checkbox:checked ~ &__label{
+      top:25%;
+    }
+    &__link{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      cursor: pointer;
+    }
+
+    &__img{
+
+    }
+  }
+  .video-container__checkbox:checked ~ .popup{
+    display: block;
+  }
+}
+
+.section-pricing{
+  @include padding-section;
+  // padding: $padding-section;
+}
+
+.section-testimonials{
+  @include padding-section;
+// padding: $padding-section;
+background-color: $color-bg-light;
+}
+
+.section-blog{
+  @include padding-section;
+  // padding: $padding-section;
+}
+
+.footer{
+  @include padding-section;
+  // padding: $padding-section;
+  background-color: #04091E
+}

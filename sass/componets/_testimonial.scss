@@ -1,0 +1,42 @@
+.testimonial{
+  position: relative;
+  padding-left: 6rem;
+  background-color: $color-white;
+  overflow: hidden;
+
+  &--col-2{
+    @include respond(phone){
+      display: none;
+    }
+  }
+
+  &__img{
+    float: left;
+    margin: 2rem;
+    // position: absolute;
+     //top: 2rem;
+    // left: 2rem;
+    @include respond(phone){
+      position: relative;
+      display: block;
+      top: 0;
+      left: 0;
+      margin-bottom: 1rem;
+    };
+  }
+
+  &__text-box{
+    padding-left: 4rem;
+  }
+
+  &__name{
+    padding: 1rem;
+
+    font-size: $font-size-heading-tertiary;
+  }
+
+  &__paragraph{
+    padding: 1rem;
+
+  }
+}
